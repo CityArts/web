@@ -1,0 +1,33 @@
+{% extends "head" %}
+{% block content %}
+            <div class="uk-card uk-card-body uk-card-default uk-margin">
+                <h3 class="uk-card-title">Tips!</h3>
+                <p>메뉴를 여시려면 상단 바의 City:Arts 아이콘을 클릭해주세요.</p>
+                <p>City:Arts 에 로그인을 아직 안하셨다면 상단 바의 <span class="uk-margin-small-right uk-border-circle" uk-icon="icon: sign-in"></span> 을 클릭해 주시거나 로그인을 하셨다면 <span class="uk-margin-small-right uk-border-circle" uk-icon="icon: user"></span> 를 클릭하여 많은 컨텐츠를 이용해보세요.</p>
+            </div>
+            <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow>
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="images/photo.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="images/dark.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="images/light.jpg" alt="" uk-cover>
+                    </li>
+                </ul>
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+            <div class="uk-card uk-card-body uk-card-primary uk-margin">
+                <h3 class="uk-card-title">Home</h3>
+                <p>City:Arts Project 는 여러분을 위한, 여러분에 의한 Minecraft / Minetest 오픈소스 프로젝트이자, 서버 프로젝트 입니다.</p>
+                <button class="uk-button uk-button-default" uk-tooltip="title: City:Arts Accounts 로 이동하기.">더 들어가 보기.</button>
+            </div>
+            <div class="uk-card uk-card-body uk-card-primary uk-margin">
+                <h3 class="uk-card-title">공지사항</h3>
+                <p>City:Arts Project 의 웹사이트가 오픈되었습니다.</p>
+                <button class="uk-button uk-button-default" uk-tooltip="title: City:Arts Forum 으로 이동하기.">더 보러가기.</button>
+            </div>
+{% endblock content %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <title>City:Arts Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/css/uikit.min.css" />
+        <link rel="stylesheet" href="/assets/css/head.css" />
+        <script src="/assets/js/uikit.min.js"></script>
+        <script src="/assets/js/uikit-icons.min.js"></script>
+ 
+        <nav class="uk-navbar uk-navbar-container uk-margin uk-width-1-1" style="position: fixed; z-index: 980;">
+            <div class="uk-navbar-left">
+                <div class="uk-offcanvas-content">
+                    <a class="uk-navbar-toggle" href="#" uk-toggle="target: #cityarts-nav"><img data-src="/assets/img/cityarts.jpg" width="50" height="50" alt="City:Arts LOGO" uk-img></a>
+                </div>
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#">
+                            with {{ user.username }}
+                        </a>
+                    </li>
+                </ul>
+                {% if is_login %}
+                <a href="/accounts"><span class="uk-margin-small-right uk-border-circle" uk-icon="icon: user"></a>
+                <a href="/accounts/logout"><span class="uk-margin-small-right uk-border-circle" uk-icon="icon: sign-out"></a>
+                {% else %}
+                <a href="/accounts"><span class="uk-margin-small-right uk-border-circle" uk-icon="icon: sign-in"></a>
+                {% endif %}
+            </div>
+        </nav>
+
+        <div id="cityarts-nav" uk-offcanvas="flip: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li><center><div class="uk-inline"><div class="uk-border-circle user-icon {{ user_icon_str }}"></div><div class="uk-overlay uk-light uk-position-center"><h3>{% if is_login %}{{ first_username }}{% else %}Login{% endif %}</h3></div></div></center></li>
+                    <li class="uk-nav-header">City:Arts</li>
+                    <li class="uk-parent {% if current_url == "/" %} uk-active {% endif %}"><a href="/">Home</a></li>
+                    <li class="uk-parent {% if current_url == "/accounts" %} uk-active {% endif %}"><a href="/accounts">Accounts</a>
+                        <ul class="uk-nav-sub">
+                            {% if is_login %}
+                            <li><a href="/accounts">My Server</a></li>
+                            {% else %}
+                            <li><a href="/accounts/login">Login</a></li>
+                            {% endif %}
+                            <li><a href="/accounts/register">Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent {% if current_url == "/introduce" %} uk-active {% endif %}"><a href="/introduce">Introduce</a></li>
+                    <li class="uk-parent {% if current_url == "/forum" %} uk-active {% endif %}"><a href="/introduce">Forum</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="http://github.com/CityArts"><span class="uk-margin-small-right" uk-icon="icon: github"></span> Github</a></li>
+                    <li><a href="http://chat.cityarts.cf"><span class="uk-margin-small-right" uk-icon="icon: comments"></span> Chat</a></li>
+                </ul>
+             </div>
+        </div>
+        {% endblock head %}
+    </head>
+    <body>
+        <img class="background-prefix" src="/assets/img/CityArts_Spawn.png" border="0" alt="">
+        <div class="uk-container">
+        <br>
+        <div style="margin-top: 100px;">
+        {% block content %}{% endblock content %}
+        </div>
+        </div>
+    </body>
+</html>

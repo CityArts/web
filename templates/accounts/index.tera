@@ -1,0 +1,13 @@
+{% extends "head" %}
+{% block content %}
+            <div class="uk-card uk-card-body uk-card-primary">
+                <h3 class="uk-card-title">{{ user.username }}</h3>
+                <p>City:Arts Project 는 여러분을 위한, 여러분에 의한 Minecraft / Minetest 오픈소스 프로젝트이자, 서버 프로젝트 입니다.</p>
+                <button class="uk-button uk-button-default" uk-tooltip="title: City:Arts Accounts 로 이동하기.">더 들어가 보기.</button>
+            </div>
+            <div class="uk-card uk-card-body uk-card-primary">
+                <h3 class="uk-card-title">공지사항</h3>
+                <p>City:Arts Project 의 웹사이트가 오픈되었습니다.</p>
+                <button class="uk-button uk-button-default" uk-tooltip="title: City:Arts Forum 으로 이동하기.">더 보러가기.</button>
+            </div>
+{% endblock content %}

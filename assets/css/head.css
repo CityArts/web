@@ -1,0 +1,76 @@
+.background-prefix {
+    height: auto;
+    left: 0;
+    margin: 0;
+    min-height: 100%;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.user-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 000 */
+.rainy_ashville{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* 001 */
+.night_fade{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+/* 002 */
+.spring_warmth{
+    background-image: linear-gradient(to top, #fad0c4 0%, #fad0c4 1%, #ffd1ff 100%);
+}
+
+/* 003 */
+.sunny_morning{
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+/* 004 */
+.lady_lips{
+    background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+/* 005 */
+.rainy_ashville{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+/* 006 */
+.winter_neva{
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* 007 */
+.heavy_rain{
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+/* 008 */
+.mean_fruit{
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+/* 009 */
+.new_life{
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+/* 010 */
+.wild_apple{
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}

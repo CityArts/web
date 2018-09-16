@@ -1,0 +1,39 @@
+{% extends "head" %}
+{% block content %}
+    <div class="uk-card uk-card-body uk-tile uk-tile-muted uk-width-medium align-center">
+        <h3 class="uk-card-title">Register to City:Arts</h3>
+        <form action="/accounts/register" method="post">
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input name="username" id="c_username" class="uk-input" type="text" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                    <input name="email" id="c_email" class="uk-input" type="email" placeholder="E-mail">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                    <input name="password" id="c_password" class="uk-input" type="password" placeholder="Password">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                    <input name="re_password" id="c_re_password" class="uk-input" type="password" placeholder="Verification Password">
+                </div>
+            </div>
+
+            <p><span class="uk-text-background"></span><a href="/accounts/find">Need helps?</a></p>
+
+            <input class="uk-button uk-button-primary uk-width-1-1" type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock content %}
